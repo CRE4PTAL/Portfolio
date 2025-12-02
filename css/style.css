@@ -335,7 +335,7 @@ body > * {
     margin-top: 1.5rem;
 }
 
-#technologie i{
+#technologie > #rzad > i{
     font-size: 5rem;
 }
 
@@ -460,4 +460,5 @@ body > * {
     /* obrazki certyfikatów jako bloki (łatwiej przeglądać na telefonie) */
     #certrzad { flex-direction: column; align-items: center; }
     #certrzad a { display: block; }
+
 }
