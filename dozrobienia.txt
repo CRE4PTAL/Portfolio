@@ -1,0 +1,3 @@
+1. Upięknij jak się da (kontakt, ikona strony [nie wiem co ale coś się da dla estetyki])
+2. Ogarnij projekty na Githuba
+3. Napraw ewentualne błędy (animowany tekst)

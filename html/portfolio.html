@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="../js/naglowek.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Obsługa DevIcons: -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <!-- Obsługa animowanego tekstu: -->
+    <link rel="stylesheet" href="../css/animowanyTekst.css">
+
+    <!-- Obsługa fontawesome: -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-…(wartość integrity)…==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Obsługa animacji scrolla: -->
+    <link rel="stylesheet" href="../css/scroll.css">
+
+    <!-- Zmiana ikony strony: -->
+    <link rel="icon" type="image/png" href="../img/screw.png">
+</head>
+<body>
+    <script>
+        naglowek(window.location.href);
+    </script>
+
+        <ul class="background">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    <section class="mt-5 reveal" id="portfolio" style="transform: translateY(0)">
+        <div class="container" style="margin-top: 20px;">
+            <h1><i class="fa-solid fa-briefcase"></i> Portfolio</h1>
+
+            <!-- ========================= -->
+            <!-- RZĄD 1 – 3 KARTY -->
+            <!-- ========================= -->
+             <br>
+            <h2>Główne projekty: </h2>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4" id="projekty">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="../img/bubbleemup.png" class="card-img-top" alt="Bubble 'Em Up!" style="width: 100%; height: 25vh;">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title "><i class="devicon-godot-plain colored"></i> Bubble 'Em Up!</h3>
+                            <p class="card-text">Gra typu rogue-like stworzona na Lublin GameJam w 48h za pomocą silnika Godot.</p>
+                            <a href="#" class="btn btn-primary mt-auto"><i class="devicon-github-original colored"></i> Zobacz więcej</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="../img/infiniterunner.png" class="card-img-top" alt="Infinite Runner" style="width: 100%; height: 25vh;">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title"><i class="devicon-unity-plain colored"></i> Infinite Runner</h3>
+                            <p class="card-text">Gra typu endless runner, z pikselowymi elementami stworzona w Unity.</p>
+                            <a href="#" class="btn btn-primary mt-auto"><i class="devicon-github-original colored"></i> Zobacz więcej</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="../img/pasjans.png" class="card-img-top" alt="Pasjans w konsoli" style="width: 100%; height: 25vh;">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title"><i class="devicon-csharp-plain colored"></i> Pasjans w konsoli</h3>
+                            <p class="card-text">Na potrzeby konkursu Gigathon 2025 stworzyłem w pełni działający pasjans w formie konsoli w języku C#.</p>
+                            <a href="#" class="btn btn-primary mt-auto"><i class="devicon-github-original colored"></i> Zobacz więcej</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- ========================= -->
+            <!-- RZĘDY DALSZE – po 4 karty -->
+            <!-- ========================= -->
+
+            <br>
+            <br>
+            <br>
+            <h2>Pomniejsze projekty: </h2>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 mt-3" style="justify-content: center;">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="../img/quizameryka.png" class="card-img-top" alt="Quiz o Ameryce" style="width: 100%; height: 20vh;">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title"><i class="devicon-dot-net-plain-wordmark"></i><i class="devicon-csharp-plain colored"></i> Quiz o Ameryce</h3>
+                            <p class="card-text">Aplikacja .NET wykonana dawno temu za pomocą języka C#.</p>
+                            <a href="#" class="btn btn-primary mt-auto"><i class="devicon-github-original colored"></i> Zobacz więcej</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="../img/arkanoid.png" class="card-img-top" alt="Arkanoid" style="width: 100%; height: 20vh;">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title"><i class="devicon-python-plain colored"></i> Arkanoid</h3>
+                            <p class="card-text">Kopia Arkanoida stworzona za pomocą biblioteki Pygame w języku Python.</p>
+                            <a href="#" class="btn btn-primary mt-auto"><i class="devicon-github-original colored"></i> Zobacz więcej</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="../img/snakepython.png" class="card-img-top" alt="Snake" style="width: 100%; height: 20vh;">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title"><i class="devicon-python-plain colored"></i> Snake</h3>
+                            <p class="card-text">Kopia popularnej gry Snake wykonana za pomocą biblioteki Pygame w języku Python.</p>
+                            <a href="#" class="btn btn-primary mt-auto"><i class="devicon-github-original colored"></i> Zobacz więcej</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="../img/travelinator.png" class="card-img-top" alt="Travelinator" style="width: 100%; height: 20vh;">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title"><i class="devicon-python-plain colored"></i> Travelinator</h3>
+                            <p class="card-text">Aplikacja konsolowa działająca na API, korzystająca z publicznych baz danych dotyczących miejscowości. Stworzona w Pythonie.</p>
+                            <a href="#" class="btn btn-primary mt-auto"><i class="devicon-github-original colored"></i> Zobacz więcej</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="../img/snakejs.png" class="card-img-top" alt="Snake w JavaScript" style="width: 100%; height: 20vh;">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title"><i class="devicon-html5-plain colored"></i><i class="devicon-css3-plain colored"></i><i class="devicon-javascript-plain colored"></i> Snake przeglądarkowy</h3>
+                            <p class="card-text">Lepsza wersja Snake'a stworzonego w Pythonie — posiada kolizje i możliwość przegrania. Napisana w HTML/JavaScript.</p>
+                            <a href="#" class="btn btn-primary mt-auto"><i class="devicon-github-original colored"></i> Zobacz więcej</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../js/animowanyScroll.js"></script>
+</body>
+</html>
