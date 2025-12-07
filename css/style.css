@@ -335,7 +335,7 @@ body > * {
     margin-top: 1.5rem;
 }
 
-#technologie > #rzad > i{
+.card-body1 > i{
     font-size: 5rem;
 }
 
@@ -462,3 +462,4 @@ body > * {
     #certrzad a { display: block; }
 
 }
+
