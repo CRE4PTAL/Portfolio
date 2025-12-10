@@ -32,18 +32,7 @@ body{
     transform: translateY(150vh);
 }
 
-#karta{
-    /* zamiast procentów użyj stabilnej wartości w px i obetnij zawartość */
-    border-radius: 12px;
-    overflow: hidden;
-    background-color: rgb(62, 50, 114);
-    text-align: center;
-    font-size: 5em;
-    color: white;
-    margin: 20px;
-}
-
-#karta:hover{
+.karta:hover{
     background-color: rgb(117, 83, 212);
     -webkit-transition: background-color 400ms linear;
     -ms-transition: background-color 400ms linear;
@@ -55,11 +44,6 @@ body{
     flex-direction: column;
 }
 
-#rzad{
-    display: flex;
-    flex-direction: row;
-}
-
 #portfolio{
     font-size: 1.5em;
     transform: translateY(200vh);
@@ -69,7 +53,7 @@ body{
     font-size: 1em;
 }
 
-.card-body:not(#karta){
+.card-body:not(.karta){
     color: white;
     background-color: black;
 }
@@ -88,16 +72,16 @@ body{
 }
 
 #certyfikaty img{
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     margin: 20px;
     border-radius: 10%;
     transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
 }
 
 #certyfikaty img:hover{
-    width: 420px;
-    height: 420px;
+    width: 320px;
+    height: 320px;
 }
 
 #certrzad{
@@ -130,12 +114,14 @@ body > * {
 /* TŁO ANIMACJI */
 .background {
     position: fixed;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
+    inset: 0;                 /* top:0; right:0; bottom:0; left:0; */
+    width: 100%;
+    min-height: 100dvh;      /* dynamiczny vh (nowoczesne przeglądarki) */
+    background: #0d0d0d;
     overflow: hidden;
     z-index: 0;
+    pointer-events: none;    /* tło nie przeszkadza w klikalności */
+    will-change: transform;  /* hint dla GPU */
 }
 
 .background li {
@@ -340,19 +326,39 @@ body > * {
 }
 
 /* Karty: używaj gridu Bootstrapa — zmniejszamy czcionkę i robimy je elastyczne */
-#karta {
+
+.karta {
     border-radius: 12px;
-    overflow: hidden;
     background-color: rgb(62, 50, 114);
     text-align: center;
-    font-size: 1rem; /* zamiast ogromnego 5em */
+    font-size: 1rem;
     color: white;
-    margin: 12px;
     padding: 1rem;
     min-height: 120px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.karta i,
+.karta img {
+    font-size: 48px;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 8px;
+}
+
+@media (max-width: 480px) {
+    .karta i,
+    .karta img {
+        font-size: 36px;
+        width: 36px;
+        height: 36px;
+    }
+
+    .karta h5 {
+        font-size: 0.85rem;
+    }
 }
 
 /* Usuń inline width: 18rem dependency na małych ekranach */
@@ -380,11 +386,7 @@ body > * {
 }
 
 /* Kursor / typewriter — mniejsze na telefonach */
-.typewriter {
-    min-height: 2em;
-    line-height: 1.2;
-    font-size: 1.05rem;
-}
+
 
 /* Karty w siatce — cień przy hover */
 .col > .card {
@@ -410,7 +412,7 @@ body > * {
     margin: 0;
     padding: 0;
     line-height: 1;
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 /* Zapewnij większy odstęp paragrafowi, by nie nakładał się na animację */
@@ -421,7 +423,7 @@ body > * {
 /* Opcjonalnie: dla małych ekranów zostaw więcej miejsca */
 @media (max-width: 576px) {
     #omnie .typewriter { min-height: 3.2em; margin-bottom: 1.1rem; }
-    #omnie p { margin-top: 1rem; }
+    #omnie p { margin-top: 1rem; font-size: 1rem; }
 }
 
 /* Mobile-first media queries */
@@ -450,7 +452,7 @@ body > * {
     }
 
     /* Karty zajmują całą szerokość kolumny */
-    #karta { margin: 8px 0; padding: 0.75rem; min-height: 100px; }
+    .karta { margin: 8px 0; padding: 0.75rem; min-height: 100px; }
 
     /* zmniejsz wielkość czcionki głównej */
     h1 { font-size: 1.3rem; }
