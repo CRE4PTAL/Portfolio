@@ -97,3 +97,39 @@
         white-space: normal !important;
     }
 }
+
+/* ZASTĘPUJEMY istniejące reguły .typewriter / .typewriter h1 czystą, stabilną wersją */
+.typewriter {
+    color: #fff;
+    font-family: monospace;
+    display: block;
+    font-size: clamp(1.2rem, 4.5vw, 2.2rem);
+    line-height: 1.2;
+    /* rezerwujemy nieco większą wysokość równą ~2.3 linii tekstu — zapobiega przeskokom layoutu */
+    min-height: calc(1.2em * 2.3);
+    max-height: calc(1.2em * 2.3);
+    overflow: hidden;          /* ukrywamy nadmiar zamiast rozpychać layout */
+    vertical-align: middle;
+    padding-right: .4em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.typewriter h1 {
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;      /* multiline clamp */
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;    /* maksymalnie 2 linie — nie zmienia wysokości kontenera */
+    overflow: hidden;
+    white-space: normal;
+    line-height: 1.2;
+    border-right: .15em solid orange; /* caret */
+    box-sizing: border-box;
+}
+
+/* Mobile — jeśli chcesz mniejszy tekst, dopasuj wielkość, kontener dalej ma ~2.3 linie */
+@media (max-width: 576px) {
+    .typewriter { font-size: clamp(1.0rem, 5vw, 1.6rem); min-height: calc(1.2em * 2.3); max-height: calc(1.2em * 2.3); }
+    .typewriter h1 { -webkit-line-clamp: 2; }
+}
