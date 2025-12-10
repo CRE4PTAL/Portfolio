@@ -1,6 +1,6 @@
 function naglowek(loc){
     let tytuly = ["Strona Główna", "Technologie", "Portfolio", "Certyfikaty", "Kontakt"];
-    let adresy = ["index.html", "technologie.html", "portfolio.html", "certyfikaty.html", "kontakt.html"];
+    let adresy = ["../index.html", "../technologie.html", "../portfolio.html", "../certyfikaty.html", "../kontakt.html"];
 
     loc = loc.substring(loc.lastIndexOf('/')+1);
     document.write(
@@ -33,5 +33,4 @@ function naglowek(loc){
             '</div>' +
         '</div>' +
     '</nav>')
-
 }
