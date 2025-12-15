@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="js/naglowek.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Obsługa DevIcons: -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <!-- Obsługa animowanego tekstu: -->
+    <link rel="stylesheet" href="css/animowanyTekst.css">
+
+    <!-- Obsługa fontawesome: -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-…(wartość integrity)…==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Obsługa animacji scrolla: -->
+    <link rel="stylesheet" href="css/scroll.css">
+
+    <!-- Zmiana ikony strony: -->
+    <link rel="icon" type="image/png" href="img/screw.png">
+</head>
+<body>
+    <script>
+        naglowek(window.location.href);
+    </script>
+
+        <ul class="background">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    <section class="mt-5 reveal" id="portfolio">
+        <div class="container" style="margin-top: 20px;">
+            <h1><i class="fa-solid fa-briefcase"></i> Portfolio</h1>
+
+            <!-- ========================= -->
+            <!-- RZĄD 1 – 3 KARTY -->
+            <!-- ========================= -->
+             <br>
+            <h2>Główne projekty: </h2>
+            <div class="col" style="margin-top: 50px; margin-bottom: 25px;">
+                <div class="card h-100">
+                    <img src="img/escapethemaze.png" class="card-img-top" alt="EscapeTheMaze" style="width: 100%; height: 50vh;">
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title"><i class="devicon-unity-plain colored"></i><i class="devicon-csharp-plain colored"></i><b> EscapeTheMaze</b></h3>
+                        <p class="card-text">Gra 3D typu platformer-puzzle stworzona w Unity. Gracz musi uciec z labiryntu, unikając pułapek (kolce, lawa, ruchome kule) i pokonując sekcje parkourowe. Zaimplementowałem zaawansowany system poruszania się z zarządzaniem staminą, mechanikę zdrowia, checkpointy oraz logikę zbierania kluczy. Projekt łączy gotowe, wysokiej jakości assety z autorskim kodem interakcji i UI.</p>
+                        <a href="https://github.com/CRE4PTAL/EscapeTheMaze" target="_blank" class="btn btn-primary mt-auto"><i class="devicon-github-original colored"></i> Zobacz więcej</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4" id="projekty">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/bubbleemup.png" class="card-img-top" alt="Bubble 'Em Up!" style="width: 100%; height: 25vh;">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title "><i class="devicon-godot-plain colored"></i><b> Bubble 'Em Up!</b></h3>
+                            <p class="card-text">Krótka gra stworzona w 48h na GameJamie. Gracz walczy z przeciwnikami, zdobywa exp i wybiera ulepszenia (prędkość, attack speed, regeneracja). Zaimplementowałem levelowanie, AI, losowe dropy, kolizje i auto-ataki. Projekt pokazuje pracę pod presją czasu i tworzenie pełnego loopa gameplayowego.</p>
+                            <a href="https://github.com/CRE4PTAL/Bubble-Em-Up-" target="_blank" class="btn btn-primary mt-auto"><i class="devicon-github-original colored"></i> Zobacz więcej</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/infiniterunner.png" class="card-img-top" alt="Infinite Runner" style="width: 100%; height: 25vh;">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title"><i class="devicon-unity-plain colored"></i><i class="devicon-csharp-plain colored"></i><b> Infinite Runner</b></h3>
+                            <p class="card-text">Dynamiczna gra 2D, w której gracz steruje robotem i omija losowo generowane przeszkody. Dodałem system punktów, power-upy (punkty + chwilowa nieśmiertelność), kolizje oraz ekran końcowy z wynikiem. Projekt prezentuje znajomość Unity, systemów fizyki, zarządzania UI oraz generowania losowej rozgrywki.</p>
+                            <a href="https://github.com/CRE4PTAL/Infinite-Runner" target="_blank" class="btn btn-primary mt-auto"><i class="devicon-github-original colored"></i> Zobacz więcej</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/pasjans.png" class="card-img-top" alt="Pasjans w konsoli" style="width: 100%; height: 25vh;">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title"><i class="devicon-csharp-plain colored"></i><b> Pasjans w konsoli</b></h3>
+                            <p class="card-text">Aplikacja konsolowa odwzorowująca „Pasjansa Pająka”. Zaimplementowałem pełną mechanikę: tasowanie, rozkładanie kart, przenoszenie stosów, kontrolę legalnych ruchów i automatyczne wykrywanie sekwencji od króla do asa. Projekt wykorzystuje OOP, pracę na kolekcjach, obsługę wyjątków i modularną strukturę kodu. Powstał jako praca konkursowa i pokazuje umiejętność tworzenia złożonej logiki gry od zera.</p>
+                            <a href="https://github.com/CRE4PTAL/Pasjans-w-konsoli" target="_blank" class="btn btn-primary mt-auto"><i class="devicon-github-original colored"></i> Zobacz więcej</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- ========================= -->
+            <!-- RZĘDY DALSZE – po 4 karty -->
+            <!-- ========================= -->
+
+            <br>
+            <br>
+            <br>
+            <h2>Pomniejsze projekty: </h2>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 mt-3" style="justify-content: center;">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/arkanoid.png" class="card-img-top" alt="Arkanoid" style="width: 100%; height: 20vh;">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title"><i class="devicon-python-plain colored"></i><b> Arkanoid</b></h3>
+                            <p class="card-text">Klasyczna gra Arkanoid w Pythonie z PyGame. Zaimplementowałem trzy poziomy, fizykę odbić, „many-hit” klocki, pełne kolizje (platforma, ściany, bloki), życie gracza, reset pozycji oraz dynamiczne zmiany kierunku wektora. Projekt pokazuje pracę z PyGame, sprite'ami, wektorami i budowanie kompletnej gry 2D od podstaw.</p>
+                            <a href="https://github.com/CRE4PTAL/Arkanoid" target="_blank" class="btn btn-primary mt-auto"><i class="devicon-github-original colored"></i> Zobacz więcej</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/snakepython.png" class="card-img-top" alt="Snake" style="width: 100%; height: 20vh;">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title"><i class="devicon-python-plain colored"></i><b> Snake</b></h3>
+                            <p class="card-text">Modularna gra Snake w Pythonie z PyGame. Kod opiera się na oddzielnych klasach dla głowy, segmentów, kierunku ruchu i jabłek. Ruch działa w systemie blokowym (32×32 px), a segmenty podążają za poprzednimi dzięki zapamiętywaniu pozycji. Gra obsługuje zmianę kierunku z zabezpieczeniem przed zawracaniem, losowe jabłka i dynamiczne wydłużanie węża. Projekt pokazuje solidne podstawy pracy z PyGame, sprite'ami i logiką ruchu po siatce.</p>
+                            <a href="https://github.com/CRE4PTAL/Snake-Python" target="_blank" class="btn btn-primary mt-auto"><i class="devicon-github-original colored"></i> Zobacz więcej</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/travelinator.png" class="card-img-top" alt="Travelinator" style="width: 100%; height: 20vh;">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title"><i class="devicon-python-plain colored"></i><b> Travelinator</b></h3>
+                            <p class="card-text">Interaktywna aplikacja konsolowa łącząca dane z trzech API: OpenWeather (pogoda), REST Countries (informacje o państwach) i NBP (kursy walut). Pozwala sprawdzać współrzędne, aktualną pogodę, walutę kraju oraz przeliczać budżet na lokalną walutę. Działa w formie menu, waliduje dane i obsługuje błędy zapytań. Projekt pokazuje praktyczne użycie REST API, pracę z JSON-em, obsługę błędów i modularną logikę.</p>
+                            <a href="https://github.com/CRE4PTAL/Travelinator" target="_blank" class="btn btn-primary mt-auto"><i class="devicon-github-original colored"></i> Zobacz więcej</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/snakejs.png" class="card-img-top" alt="Snake w JavaScript" style="width: 100%; height: 20vh;">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title"><i class="devicon-html5-plain colored"></i><i class="devicon-css3-plain colored"></i><i class="devicon-javascript-plain colored"></i><b> Snake przeglądarkowy</b></h3>
+                            <p class="card-text">Interaktywna gra „Snake” działająca w przeglądarce. Wykorzystuje dynamiczną manipulację DOM do tworzenia segmentów węża i aktualizacji ich pozycji. Obsługuje sterowanie z blokadą zawracania, kolizje (jabłko, ciało, granice), animacje oraz zmianę grafiki zależnie od kierunku ruchu. Zlicza punkty, długość i czas gry. Projekt pokazuje tworzenie gry od podstaw w JS, łączenie HTML/CSS z logiką oraz wykorzystanie jQuery do manipulacji DOM.</p>
+                            <a href="https://github.com/CRE4PTAL/Snake-JS" target="_blank" class="btn btn-primary mt-auto"><i class="devicon-github-original colored"></i> Zobacz więcej</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img\umedyka.png" class="card-img-top" alt="U Medyka" style="width: 100%; height: 20vh;">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title"><i class="devicon-wordpress-plain"></i> <i class="fa-brands fa-elementor" style="color: #b427a8;"></i><b> Strona internetowa "uMedyka.pl"</b></h3>
+                            <p class="card-text">Profesjonalna strona internetowa stworzona przeze mnie w ramach praktyk zawodowych dla klienta z branży medycznej. Witryna została wykonana w oparciu o WordPress z wykorzystaniem Elementor Pro, co pozwoliło na dopracowanie wyglądu, responsywności oraz intuicyjnej nawigacji. Strona prezentuje ofertę usług, informacje kontaktowe oraz umożliwia szybkie zapoznanie się z zakresem badań i umówienie wizyty.</p>
+                            <a href="https://u-medyka.pl" target="_blank" class="btn btn-primary mt-auto"><i class="fa-solid fa-globe"></i> Zobacz więcej</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/animowanyScroll.js"></script>
+</body>
+</html>

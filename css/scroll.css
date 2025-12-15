@@ -1,0 +1,32 @@
+/* Outer .reveal pozostawia Twoje translateY / margin itp. — nie zmieniamy ich tutaj. */
+.reveal {
+  /* nie ustawiamy margin-top ani transform — zachowaj własne rozmieszczenie */
+  opacity: 1; /* outer visible, inner będzie animować wewnętrzną zawartość */
+}
+
+/* wrapper wewnętrzny, który będziemy dynamicznie dodawać przez JS */
+.reveal-inner {
+  opacity: 0;
+  transform: translateY(24px); /* drobne przesunięcie wejścia — nie koliduje z zewnętrznym translateY */
+  transition: opacity 1000ms ease, transform 1000ms ease;
+}
+
+.reveal-inner.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal.is-visible{
+    animation: text-appear 800ms ease both;
+}
+
+@keyframes text-appear{
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,135 @@
+/* DEMO-SPECIFIC STYLES */
+.typewriter{
+    /* kontener rezerwuje wysokość, nie ma już border-right */
+    background: #121FCF;
+    background: linear-gradient(to right, #303bd1 0%, #4CA3CF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    --chars: 20;
+    color: #fff;
+    font-family: monospace;
+    overflow: visible;
+    white-space: nowrap;
+    margin: 0;
+    letter-spacing: .15em;
+    display: inline-block;
+    animation: blink-caret .75s step-end infinite;
+
+    /* stała wysokość aby nie powodować przeskoków */
+    min-height: 3em;
+    height: 1.8em;
+    line-height: 1.8em;
+    min-width: 200px; /* rezerwuj trochę miejsca, ale nie za dużo */
+    width: auto;
+    vertical-align: middle;
+    padding-right: .4em; /* luz po prawej */
+}
+
+/* caret przeniesiony na element z tekstem — będzie podążać za zawartością */
+.typewriter h1 {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  line-height: 1.8em;
+  display: inline-block;      /* ważne: inline-block -> szerokość zależy od tekstu */
+  white-space: nowrap;
+  overflow: visible;
+  border-right: .15em solid orange; /* caret przy tekście */
+  box-sizing: content-box;
+  padding-right: .25em; /* miejsce na caret */
+}
+
+/* The typing keyframes are no longer used by CSS but kept if needed */
+@keyframes typing {
+  0%   { width: 0; }
+  60%  { width: calc(var(--chars) * 1ch); }
+  100% { width: 0; }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: orange; }
+}
+
+.typewriter {
+    white-space: normal;        /* zamiast nowrap */
+    overflow: visible;          /* nic nie ucinaj */
+    height: auto;               /* nie trzymaj na sztywno */
+    min-height: 0;              /* nie wymuszaj 3em */
+    line-height: 1.3;
+    display: inline-flex;       /* ładne wyśrodkowanie */
+    align-items: center;
+}
+
+/* Sam tekst: może się łamać w linijki */
+.typewriter h1 {
+    white-space: normal;        /* nadpisanie nowrap */
+    border-right: .15em solid orange;
+    display: inline-block;
+    line-height: 1.3;
+    font-size: clamp(1.4rem, 5vw, 2.4rem); /* skaluje się z ekranem */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Dodatkowe dostosowanie dla bardzo wąskich ekranów */
+@media (max-width: 576px) {
+    .typewriter {
+        width: 100%;            /* niech ma pełną szerokość kolumny */
+    }
+
+    .typewriter h1 {
+        font-size: clamp(1.2rem, 6vw, 2rem);
+    }
+}
+
+.typewriter,
+.typewriter h1 {
+    white-space: nowrap;
+}
+
+/* na mobilkach zawijaj */
+@media (max-width: 576px) {
+    .typewriter,
+    .typewriter h1 {
+        white-space: normal !important;
+    }
+}
+
+/* ZASTĘPUJEMY istniejące reguły .typewriter / .typewriter h1 czystą, stabilną wersją */
+.typewriter {
+    color: #fff;
+    font-family: monospace;
+    display: block;
+    font-size: clamp(1.2rem, 4.5vw, 2.2rem);
+    line-height: 1.2;
+    /* rezerwujemy nieco większą wysokość równą ~2.3 linii tekstu — zapobiega przeskokom layoutu */
+    min-height: calc(1.2em * 2.3);
+    max-height: calc(1.2em * 2.3);
+    overflow: hidden;          /* ukrywamy nadmiar zamiast rozpychać layout */
+    vertical-align: middle;
+    padding-right: .4em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.typewriter h1 {
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;      /* multiline clamp */
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;    /* maksymalnie 2 linie — nie zmienia wysokości kontenera */
+    overflow: hidden;
+    white-space: normal;
+    line-height: 1.2;
+    border-right: .15em solid orange; /* caret */
+    box-sizing: border-box;
+}
+
+/* Mobile — jeśli chcesz mniejszy tekst, dopasuj wielkość, kontener dalej ma ~2.3 linie */
+@media (max-width: 576px) {
+    .typewriter { font-size: clamp(1.0rem, 5vw, 1.6rem); min-height: calc(1.2em * 2.3); max-height: calc(1.2em * 2.3); }
+    .typewriter h1 { -webkit-line-clamp: 2; }
+}
